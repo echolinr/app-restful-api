@@ -29,11 +29,12 @@ Present your submission in the form a document with the following table.
 Error Code  | Error Message    | Relevant Resources  | Parameters
 ----------- | ----------|------------ |-----
  1001  | Invalid resource name {0} given  | All Resources  | `0 - Resource Name`
-1002 | Duplicate attribute | All Resources | None
- 1003 | Given {0} already exists | All resources | `0 - attribute name`
+ 1002  | Duplicate attribute | All Resources | None
+ 1003  | Given {0} already exists | All resources | `0 - attribute name`
  1004  | {0} can not be empty | All Resources  | `0 - attribute name`
  1005  | format of {0} is not correct  | All Resources  | `0 - attribute name`
  1006  | given {0} does not exist | All Resources  | `0 - attribute name`
+ 1007  | 
  -------
 
 **Part 2**

@@ -8,11 +8,19 @@ var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
 var PaymentAccountSchema   = new Schema({
-    accountType: String,
-    accountNumber: Number,
-    expirationDate: Date,
-    nameOnAccount: String, 
-    bank: String
+    accountType: {type: String, length: 18, required: true},
+    accountNumber: {type: Number, length: 18, required: true},
+    expirationDate: {type: Number}, // - expirationDate (Number, Timestamp, Required for passenger accounts only)
+    nameOnAccount: {type: String, length: 18, required: true},
+    driver_id: {type: String, ref: 'Driver'},
+    passenger_id: {type: String, ref: 'Passenger'},
+    bank: {type: String, length: 18, required: true} // - bank (String, 18, Required for driver accounts only)
 });
 
 module.exports = mongoose.model('PaymentAccount', PaymentAccountSchema);
+
+// - accountType (String, 18, Required)
+// - accountNumber (Number, 18, Required)
+// - expirationDate (Number, Timestamp, Required for passenger accounts only)
+// - nameOnAccount (String, 18, Required)
+// - bank (String, 18, Required for driver accounts only)
