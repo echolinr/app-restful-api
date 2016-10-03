@@ -4,7 +4,11 @@
 
 ## **Part 1**
 
-### homework time - part1: due Oct 2,2016  time spent on coding:  4 hours
+### homework time - 
+
+part1: due Oct 2,2016  
+
+time spent on coding:  4 hours
 
 
 In this part of the exercise, you will identify error codes and error messages that will be part of the response body of your API if there's a problem
