@@ -2,7 +2,10 @@
 
 ----
 
-**Part 1**
+## **Part 1**
+
+### homework time - part1: due Oct 2,2016  time spent on coding:  4 hours
+
 
 In this part of the exercise, you will identify error codes and error messages that will be part of the response body of your API if there's a problem
 in fulfilling a request. the response body will look as below
@@ -33,8 +36,7 @@ Error Code  | Error Message    | Relevant Resources  | Parameters
  1003  | Given {0} already exists | All resources | `0 - attribute name`
  1004  | {0} can not be empty | All Resources  | `0 - attribute name`
  1005  | format of {0} is not correct  | All Resources  | `0 - attribute name`
- 1006  | given {0} does not exist | All Resources  | `0 - attribute name`
- 1007  | 
+ 1006  | given {0} does not exist | All Resources  | `0 - attribute name` 
  -------
 
 **Part 2**
