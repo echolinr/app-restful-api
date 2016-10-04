@@ -77,7 +77,7 @@ router.route('/cars')
             return;
         }
         /**
-         * error1005: wrong format
+         * format wrong (POST, PATCH)
          */
         if (typeof req.body.license === 'undefined') {
             res.status(422).json({
@@ -117,6 +117,7 @@ router.route('/cars')
         car.doorCount = req.body.doorCount;
         car.make = req.body.make;
         car.model = req.body.model;
+        car.driver = req.body.driver;
 
         car.save(function (err) {
             if (err) {
@@ -133,7 +134,7 @@ router.route('/cars/:car_id')
      */
     .get(function (req, res) {
         /**
-         * error 1002: Id not found
+         *error 1002: Id not found (GET, DELETE, PATCH)
          */
         if (typeof req.params.car_id === "undefined") {
             res.status(404).json({
@@ -158,7 +159,7 @@ router.route('/cars/:car_id')
     .patch(function (req, res) {
 
         /**
-         * error 1002: Id not found
+         *error 1002: Id not found (GET, DELETE, PATCH)
          */
         if (typeof req.params.car_id === "undefined") {
             res.status(404).json({
@@ -171,7 +172,7 @@ router.route('/cars/:car_id')
 
 
         /**
-         * format wrong
+         * format wrong (POST, PATCH)
          */
 
         if (typeof req.body.license === 'undefined') {
@@ -216,7 +217,7 @@ router.route('/cars/:car_id')
      */
     .delete(function (req, res) {
         /**
-       * error 1002: Id not found
+         *error 1002: Id not found (GET, DELETE, PATCH)
        */
         if (typeof req.params.car_id === "undefined") {
             res.status(404).json({

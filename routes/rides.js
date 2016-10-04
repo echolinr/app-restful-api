@@ -47,6 +47,7 @@ router.route('/rides')
             "errorMessage" : util.format("Missing required parameter %s", "startPoint"), 
             "statusCode" : "400"
        });
+       return
       }
         if(req.body.endPoint == empty){
           res.status(400).json({
